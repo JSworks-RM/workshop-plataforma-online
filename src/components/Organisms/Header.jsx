@@ -21,7 +21,7 @@ const Header = () => (
         <div className="s-cols-1 lg-cols-3 s-cross-center s-main-end">
           <nav className="main-menu" ref={menu}>
             <ul>
-              <li><NavLink to="/">Inicio</NavLink></li>
+              <li><NavLink exact to="/">Inicio</NavLink></li>
               <li><NavLink to="/especialidades">Especialidades</NavLink></li>
               <li><NavLink to="/cursos">Cursos</NavLink></li>
               <li><NavLink to="/profesores">Profesores</NavLink></li>
