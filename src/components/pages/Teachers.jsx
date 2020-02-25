@@ -23,20 +23,35 @@ const Teachers = ({ match, teachers }) => {
         title="Nuestros profesores"
         subtitle="Este plan docente esta altamente calificado para guiarte en la formación"
       />
-      <main className="ed-grid">
-        <p>
+      {
+        // Sintaxis propia del renderizado de react para que sólo renderice teachers si existe.
+        // De esta manera no nos da undefine. Si teachers existe && se cumple lo segundo y se renderiza main
+        teachers &&
+        <main className="ed-grid m-grid-3 lg-grid-4 row-gap">
           {
-            JSON.stringify(teachers)
+            teachers.map(t => (
+              <article key={t.id}>
+                <div className="s-px-4">
+                  <div className="img-container circle s-mb-2">
+                    <img src={t.picture} alt={t.name}/>
+                  </div>
+                </div>
+                <div className="center">
+                  <p className="t3 s-mb-1">{t.name}</p>
+                  <p>{t.country}</p>
+                </div>
+              </article>
+            ))
           }
-        </p>
       </main>
+      }
     </>
   )
 
 }
 
 const mapStateToProps = state => ({
-  teachers: state.teacherReducer
+  teachers: state.teacherReducer.teachers
 })
 
 export default connect(mapStateToProps, {})(Teachers)
