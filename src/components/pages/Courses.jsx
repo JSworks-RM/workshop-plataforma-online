@@ -1,9 +1,16 @@
 import React from 'react'
+import Banner from '../Organisms/Banner'
 
 const Courses = () => (
-    <div className="ed-grid">
-      <h1>Cursos</h1>
-    </div>
+    <Banner 
+      color= "dark-color"
+      image= {{
+        src:"https://drupal.ed.team/sites/default/files/imagenes-cdn-edteam/2017-11/banner-equipo.jpg",
+        alt:"Banner Cursos"
+      }}
+      title="Nuestros cursos"
+      subtitle="Comienza desde cero hoy mísmo en tu camino a dominar la tecnología"
+    />
 )
 
 export default Courses
