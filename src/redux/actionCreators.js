@@ -13,7 +13,7 @@ import {
 const API_URL = process.env.REACT_APP_API_URL // Acceso a variables de entorno
 
 export const getAllPosts = () => dispatch => {
-  axios.get(`${API_URL}:3001/posts`)
+  axios.get(`${API_URL}/posts`)
   .then(resp => {
     return dispatch({
       type: GET_ALL_POSTS,
@@ -33,7 +33,7 @@ export const getAllSpecialities = () => dispatch => {
 }
 
 export const getAllCourses = () => dispatch => {
-  axios.get(`${API_URL}:3001/cursos`)
+  axios.get(`${API_URL}/cursos`)
   .then(resp => {
     return dispatch({
       type: GET_ALL_COURSES,
@@ -43,7 +43,7 @@ export const getAllCourses = () => dispatch => {
 }
 
 export const getAllTeachers = () => dispatch => {
-  axios.get(`${API_URL}:3001/profesores`)
+  axios.get(`${API_URL}/profesores`)
   .then(resp => {
     return dispatch({
       type: GET_ALL_TEACHERS,
@@ -53,7 +53,7 @@ export const getAllTeachers = () => dispatch => {
 }
 
 export const getPost = id => dispatch => {
-  axios.get(`${API_URL}:3001/posts/${id}`)
+  axios.get(`${API_URL}/posts/${id}`)
   .then(resp => {
     return dispatch({
       type: GET_POST,
@@ -63,7 +63,7 @@ export const getPost = id => dispatch => {
 }
 
 export const getSpeciality = id => dispatch => {
-  axios.get(`${API_URL}:3001/especialidades/${id}`)
+  axios.get(`${API_URL}/especialidades/${id}`)
   .then(resp => {
     return dispatch({
       type: GET_SPECIALITY,
@@ -73,7 +73,7 @@ export const getSpeciality = id => dispatch => {
 }
 
 export const getCourse = id => dispatch => {
-  axios.get(`${API_URL}:3001/cursos/${id}`)
+  axios.get(`${API_URL}/cursos/${id}`)
   .then(resp => {
     return dispatch({
       type: GET_COURSE,
@@ -83,7 +83,7 @@ export const getCourse = id => dispatch => {
 }
 
 export const getFragment = id => dispatch => {
-  axios.get(`${API_URL}:3001/clases/${id}`)
+  axios.get(`${API_URL}/clases/${id}`)
   .then(resp => {
     return dispatch({
       type: GET_FRAGMENT,
