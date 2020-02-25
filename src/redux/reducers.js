@@ -17,7 +17,7 @@ export const postReducer = ( state = {}, action ) => {
   return state
 }
 
-export const especialityReducer = ( state = {}, action ) => {
+export const specialityReducer = ( state = {}, action ) => {
   if ( action.type === GET_ALL_SPECIALITIES ) {
     return {
       ...state,

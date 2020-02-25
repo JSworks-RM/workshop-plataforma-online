@@ -3,7 +3,7 @@ import { composeWithDevTools } from "redux-devtools-extension"
 import thunk from "redux-thunk"
 import { 
     postReducer, 
-    especialityReducer, 
+    specialityReducer, 
     courseReducer, 
     teacherReducer, 
     fragmentReducer } 
@@ -15,7 +15,7 @@ export default createStore(
   combineReducers(
     {
       postReducer,
-      especialityReducer,
+      specialityReducer,
       courseReducer,
       teacherReducer,
       fragmentReducer
