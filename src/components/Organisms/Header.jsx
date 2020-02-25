@@ -6,6 +6,11 @@ const toggleMenu = () => menu.current.classList.toggle('show')
 // toggleMenu va a acceder al elemento menu guardado como referencia y va a pedir el estado actual "current"
 // con classList accede a la clase del elemento y con toggle('show) le pone la clase show si no la tiene y si la tiene se la quita
 
+const removeToken = () => {
+  localStorage.removeItem('token')
+  window.location = "/login"
+}
+
 const Header = () => (
     <header className="main-header">
       <div className="ed-grid s-grid-5 lg-grid-4">
@@ -25,6 +30,7 @@ const Header = () => (
               <li><NavLink to="/especialidades">Especialidades</NavLink></li>
               <li><NavLink to="/cursos">Cursos</NavLink></li>
               <li><NavLink to="/profesores">Profesores</NavLink></li>
+              <li><span onClick={() => removeToken()}>Cerrar sesión</span></li>
             </ul>
           </nav>
           <div 

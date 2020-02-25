@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const authentication = e => {
   e.preventDefault()
@@ -9,6 +10,8 @@ const authentication = e => {
     email: form.email.value,
     password: form.password.value
   }
+
+  //const API_USER_URL = process.env.REACT_APP_API_USER
 
   axios.post(`https://api-edteam.alejogs4.now.sh/login`, data)
   .then(res => {
@@ -40,6 +43,9 @@ const Login = () => (
             <input type="submit" className="button full" value="Iniciar sesión" />
           </div>
         </form>
+        <div className="center">
+          <p>¿No tienes cuenta de usuario? <Link to="/registro">Crear cuenta</Link></p>
+        </div>
       </div>
     </div>
 )
