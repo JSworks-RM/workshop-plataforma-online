@@ -32,6 +32,8 @@ const Specialities = ({specialities}) => {
                 picture = {s.picture}
                 name = {s.name}
                 key = {s.id}
+                path = "especialidades"
+                cardId = {s.id}
               />
             ))
           }

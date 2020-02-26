@@ -18,6 +18,7 @@ const Home = ({ posts }) => {
         image = "https://drupal.ed.team/sites/default/files/imagenes-cdn-edteam/2017-11/banner-equipo.jpg"
         title = "Bienvenido a la experiencia más increible de educación online. Comienza hoy mismo a aprender"
         subtitle = "Nuestro equipo ha desarrollado esta plataforma pensando en ti. Sabemos que estas buscando contenido de calidad. Aquí lo encontrarás"
+        poster = "https://drupal.ed.team/sites/default/files/styles/16_9_medium/public/imagenes-cdn-edteam/2020-01/ui_design.png"
         home
       />
       <main className="ed-grid m-grid-3">
