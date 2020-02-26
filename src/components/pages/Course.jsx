@@ -54,7 +54,7 @@ const Course = ({ course }) => {
                         <ul>
                           {
                             cl.subjects.map(s => (
-                            <li>{s.subject.title}</li>
+                            <li key={s.id}>{s.subject.title}</li>
                             ))
                           }
                         </ul>
