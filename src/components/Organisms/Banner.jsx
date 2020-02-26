@@ -29,7 +29,10 @@ const Banner = ({ color, image, title, subtitle, home, poster, courseBanner, spe
                 <h1 className="main-banner__title s-mb-0">{title}</h1>
                 <p className="s-opacity-6">{subtitle}</p>
                 <p>{info}</p>
-                <p>Este curso forma parte de la especialidad <Link to="/especialidades">{speciality}</Link></p>
+                {
+                  speciality &&
+                  <p>Este curso forma parte de la especialidad <Link to="/especialidades">{speciality}</Link></p>
+                }
               </div>
               <div className="img-container s-ratio-16-9 m-cols-1">
                 <img src={poster} alt="Diseño de interfaces"/>

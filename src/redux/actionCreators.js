@@ -63,7 +63,7 @@ export const getPost = id => dispatch => {
 }
 
 export const getSpeciality = id => dispatch => {
-  axios.get(`${API_URL}/especialidades/${id}`)
+  axios.get(`${API_URL}/especialidad/${id}`)
   .then(resp => {
     return dispatch({
       type: GET_SPECIALITY,
