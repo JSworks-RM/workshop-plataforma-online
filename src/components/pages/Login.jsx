@@ -11,9 +11,9 @@ const authentication = e => {
     password: form.password.value
   }
 
-  //const API_USER_URL = process.env.REACT_APP_API_USER
+  const API_USER_URL = process.env.REACT_APP_API_USER
 
-  axios.post(`https://api-edteam.alejogs4.now.sh/login`, data)
+  axios.post(`${API_USER_URL}/login`, data)
   .then(res => {
     localStorage.setItem('token', res.data.token)
     window.location = '/'

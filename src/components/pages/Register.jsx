@@ -12,10 +12,13 @@ const registration = e => {
     "password": form.password.value
   }
 
-  //const API_USER_URL = process.env.REACT_APP_API_USER
+  const API_USER_URL = process.env.REACT_APP_API_USER
 
-  axios.post(`https://api-edteam.alejogs4.now.sh/signup`, data)
-    .then(res => alert('Usuario creado'))
+  axios.post(`${API_USER_URL}/signup`, data)
+    .then(res => {
+      alert('Usuario creado')
+      window.location = '/login'
+    })
     .catch(e => alert('Error al crear usuario'))
 }
  
@@ -44,7 +47,7 @@ const Register = () => (
           </label>
         </div>
         <div className="form__item">
-          <input type="submit" className="button full" value="Iniciar sesión" />
+          <input type="submit" className="button full" value="Crear cuenta" />
         </div>
       </form>
       <div className="center">
